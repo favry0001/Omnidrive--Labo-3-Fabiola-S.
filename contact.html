@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact - OmniDrive</title>
+    <meta name="description" content="Écrire à l'équipe OmniDrive, consulter les coordonnées de l'école et voir sa position sur la carte.">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Roboto+Mono:wght@400;700&amp;display=swap">
+
+    
+    <link rel="stylesheet" href="vendor/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="lien-evitement" href="#contenu">Aller au contenu</a>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-principale" aria-label="Navigation principale">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><span class="marque-pastille" aria-hidden="true"></span>OmniDrive</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#menu" aria-controls="menu"
+                    aria-expanded="false" aria-label="Ouvrir le menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cours.html">Cours</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="calendrier.html">Calendrier</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="suivi.html">Mon suivi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="moniteurs.html">Moniteurs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="inscription.html">Inscription</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main id="contenu" class="container py-5">
+
+    <h1>Contact</h1>
+    <p>Une question sur un cours, un horaire ou ton dossier ? Écris-nous, nous répondons en un à deux jours ouvrables.</p>
+
+    <div class="row g-4">
+        <section class="col-12 col-lg-6" aria-labelledby="titre-message">
+            <h2 id="titre-message">Écrire à l'équipe</h2>
+            
+            <form class="formulaire-carte" action="merci.html" method="get">
+                <div class="mb-3">
+                    <label for="contact-nom" class="form-label">Nom <span class="obligatoire">(obligatoire)</span></label>
+                    <input type="text" id="contact-nom" name="nom" class="form-control" required minlength="2" autocomplete="name">
+                </div>
+                <div class="mb-3">
+                    <label for="contact-courriel" class="form-label">Courriel <span class="obligatoire">(obligatoire)</span></label>
+                    <input type="email" id="contact-courriel" name="courriel" class="form-control" required autocomplete="email">
+                </div>
+                <div class="mb-3">
+                    <label for="contact-sujet" class="form-label">Sujet <span class="obligatoire">(obligatoire)</span></label>
+                    <select id="contact-sujet" name="sujet" class="form-select" required>
+                        <option value="">Choisir un sujet…</option>
+                        <option value="cours">Les cours</option>
+                        <option value="rdv">Un rendez-vous</option>
+                        <option value="inscription">Mon inscription</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="contact-message" class="form-label">Message, 10 caractères minimum <span class="obligatoire">(obligatoire)</span></label>
+                    <textarea id="contact-message" name="message" class="form-control" rows="5" required minlength="10" maxlength="500"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Envoyer le message</button>
+            </form>
+        </section>
+
+        <section class="col-12 col-lg-6" aria-labelledby="titre-coordonnees">
+            <h2 id="titre-coordonnees">Coordonnées</h2>
+            <dl class="coordonnees">
+                <dt>Adresse</dt>
+                <dd>123, rue de la Conduite, Montréal (Québec)</dd>
+                <dt>Téléphone</dt>
+                <dd>514 555-0142</dd>
+                <dt>Courriel</dt>
+                <dd>info@omnidrive.ca</dd>
+                <dt>Heures d'ouverture</dt>
+                <dd>Du lundi au vendredi, de 9 h à 18 h. Le samedi, de 9 h à 15 h.</dd>
+            </dl>
+
+            
+            <div class="ratio ratio-4x3 carte-ratio">
+                <iframe title="Carte du centre-ville de Montréal" src="https://www.openstreetmap.org/export/embed.html?bbox=-73.6000%2C45.4900%2C-73.5400%2C45.5200&amp;layer=mapnik" loading="lazy"></iframe>
+            </div>
+            <p class="note-fictive">Carte indicative du centre-ville</p>
+        </section>
+    </div>
+
+</main>
+
+<footer class="pied-de-page">
+    <div class="container">
+        <div class="pied-colonnes">
+            <div>
+                <h2>OmniDrive</h2>
+                <p>Le portail de gestion pour école de conduite : cours, suivi des heures, rendez-vous et fiches des moniteurs.</p>
+            </div>
+            <div>
+                <h2>Plan du site</h2>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="cours.html">Cours</a></li>
+                    <li><a href="calendrier.html">Calendrier</a></li>
+                    <li><a href="suivi.html">Mon suivi</a></li>
+                    <li><a href="moniteurs.html">Moniteurs</a></li>
+                    <li><a href="inscription.html">Inscription</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Nous joindre</h2>
+                <p>123, rue de la Conduite<br>Montréal (Québec)<br>Téléphone : 514 555-0142<br>Courriel : info@omnidrive.ca</p>
+            </div>
+        </div>
+        <div class="pied-credits">
+            <p>Crédits des images : les neuf visuels du site panneaux, illustrations et photos de conduite ont été trouvés en ligne, sur Pinterest. </p>
+            <p>Polices : Montserrat et Roboto Mono Google Fonts, licence SIL OFL. Framework : Bootstrap 5.3 .</p>
+            <p>© 2026 OmniDrive. Tous droits réservés. ⛐💨</p>
+        </div>
+    </div>
+</footer>
+
+<script src="vendor/bootstrap.bundle.min.js"></script>
+</body>
+</html>

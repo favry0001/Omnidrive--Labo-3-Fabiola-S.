@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inscription - OmniDrive</title>
+    <meta name="description" content="Formulaire d'inscription à l'école de conduite OmniDrive : coordonnées, type de permis et disponibilités.">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Roboto+Mono:wght@400;700&amp;display=swap">
+
+    
+    <link rel="stylesheet" href="vendor/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="lien-evitement" href="#contenu">Aller au contenu</a>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-principale" aria-label="Navigation principale">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><span class="marque-pastille" aria-hidden="true"></span>OmniDrive</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#menu" aria-controls="menu"
+                    aria-expanded="false" aria-label="Ouvrir le menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cours.html">Cours</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="calendrier.html">Calendrier</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="suivi.html">Mon suivi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="moniteurs.html">Moniteurs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="inscription.html">Inscription</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main id="contenu" class="container py-5">
+
+    <h1>Inscription à l'école</h1>
+    <p>Remplis les trois étapes ci-dessous. Les champs marqués « obligatoire » doivent être remplis pour envoyer le formulaire.</p>
+
+    <ol class="etapes">
+        <li>Tes informations</li>
+        <li>Ton permis</li>
+        <li>Tes disponibilités</li>
+    </ol>
+
+    <div class="row g-4">
+        <div class="col-12 col-lg-8">
+            <!-- F-09 : validation en temps réel et message de confirmation. Seule la validation HTML5 est active ; le reste au Laboratoire 3. -->
+            <form class="formulaire-carte" action="merci.html" method="get">
+
+                <fieldset class="mb-4">
+                    <legend>Tes informations</legend>
+                    <div class="row g-3">
+                        <div class="col-12 col-md-6">
+                            <label for="prenom" class="form-label">Prénom <span class="obligatoire">(obligatoire)</span></label>
+                            <input type="text" id="prenom" name="prenom" class="form-control" required minlength="2" maxlength="40" autocomplete="given-name">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="nom" class="form-label">Nom <span class="obligatoire">(obligatoire)</span></label>
+                            <input type="text" id="nom" name="nom" class="form-control" required minlength="2" maxlength="40" autocomplete="family-name">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="courriel" class="form-label">Courriel <span class="obligatoire">(obligatoire)</span></label>
+                            <input type="email" id="courriel" name="courriel" class="form-control" required autocomplete="email">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="telephone" class="form-label">Téléphone, 10 chiffres <span class="obligatoire">(obligatoire)</span></label>
+                            <input type="tel" id="telephone" name="telephone" class="form-control" required pattern="[0-9]{10}" title="10 chiffres, sans espace ni tiret" inputmode="numeric" autocomplete="tel">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="naissance" class="form-label">Date de naissance, 16 ans minimum <span class="obligatoire">(obligatoire)</span></label>
+                            <input type="date" id="naissance" name="naissance" class="form-control" required min="1940-01-01" max="2010-10-08" autocomplete="bday">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="mb-4">
+                    <legend>Ton permis</legend>
+                    <label for="permis" class="form-label">Type de permis <span class="obligatoire">(obligatoire)</span></label>
+                    <select id="permis" name="permis" class="form-select" required>
+                        <option value="">Choisir un type de permis…</option>
+                        <option value="classe-5">Classe 5 : automobile</option>
+                        <option value="classe-6">Classe 6 : motocyclette</option>
+                        <option value="classe-3">Classe 3 : camion</option>
+                    </select>
+                </fieldset>
+
+                <fieldset class="mb-4">
+                    <legend>Tes disponibilités</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="dispo-jour" name="dispo" value="jour">
+                        <label class="form-check-label" for="dispo-jour">En semaine, le jour</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="dispo-soir" name="dispo" value="soir">
+                        <label class="form-check-label" for="dispo-soir">En semaine, le soir</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="dispo-fin" name="dispo" value="fin-de-semaine">
+                        <label class="form-check-label" for="dispo-fin">La fin de semaine</label>
+                    </div>
+                </fieldset>
+
+                <div class="form-check mb-4">
+                    <input class="form-check-input" type="checkbox" id="accord" name="accord" value="oui" required>
+                    <label class="form-check-label" for="accord">J'accepte d'être contacté par l'école au sujet de mon inscription <span class="obligatoire">(obligatoire)</span></label>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-lg">S'inscrire</button>
+            </form>
+        </div>
+
+        <aside class="col-12 col-lg-4" aria-labelledby="titre-avant">
+            <h2 id="titre-avant" class="h4">Avant de commencer</h2>
+            <ul>
+                <li>Avoir 16 ans ou plus à la date de l'inscription.</li>
+                <li>Prévoir environ cinq minutes.</li>
+                <li>Apporter une pièce d'identité à ta première séance.</li>
+            </ul>
+        </aside>
+    </div>
+
+</main>
+
+<footer class="pied-de-page">
+    <div class="container">
+        <div class="pied-colonnes">
+            <div>
+                <h2>OmniDrive</h2>
+                <p>Le portail de gestion pour école de conduite  cours, suivi des heures, rendez-vous et fiches des moniteurs.</p>
+            </div>
+            <div>
+                <h2>Plan du site</h2>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="cours.html">Cours</a></li>
+                    <li><a href="calendrier.html">Calendrier</a></li>
+                    <li><a href="suivi.html">Mon suivi</a></li>
+                    <li><a href="moniteurs.html">Moniteurs</a></li>
+                    <li><a href="inscription.html">Inscription</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Nous joindre</h2>
+                <p>123, rue de la Conduite<br>Montréal (Québec)<br>Téléphone : 514 555-0142<br>Courriel : info@omnidrive.ca</p>
+            </div>
+        </div>
+        <div class="pied-credits">
+            <p>Crédits des images : les neuf visuels du site panneaux, illustrations et photos de conduite ont été trouvés en ligne, sur Pinterest. </p>
+            <p>Polices : Montserrat et Roboto Mono Google Fonts, licence SIL OFL. Framework : Bootstrap 5.3 .</p>
+            <p>© 2026 OmniDrive. Tous droits réservés. ⛐💨</p>
+        </div>
+    </div>
+</footer>
+
+<script src="vendor/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,1009 @@
+/* ====================
+   1. VARIABLES ET BASE */
+
+
+:root {
+    /* Palette de la charte */
+    --couleur-ambre: #ffae00;
+    --couleur-ambre-fonce: #e09a00;
+    --couleur-olive: #cac307;
+    --couleur-lavande: #bac5e8;
+    --couleur-creme: #f9f3db;
+    --couleur-nuit: #25294f;
+    --couleur-erreur: #b3261e;
+
+    
+    --fond: var(--couleur-creme);
+    --surface: #ffffff;
+    --texte: #2d2d2d;
+    --texte-doux: #4d4a40;
+    --lien: var(--couleur-nuit);
+    --bordure: var(--couleur-lavande);
+    --bandeau: var(--couleur-lavande);
+    --bandeau-texte: var(--couleur-nuit);
+    --entete-fond: var(--couleur-nuit);
+    --entete-texte: var(--couleur-creme);
+    --focus: var(--couleur-nuit);
+
+    /* Polices de la charte */
+    --police-titres: "Montserrat", "Segoe UI", Arial, sans-serif;
+    --police-texte: "Roboto Mono", "Consolas", "Courier New", monospace;
+
+    
+    --rayon: 0.75rem;
+    --ombre: 0 2px 10px rgba(37, 41, 79, 0.12);
+    --ombre-forte: 0 10px 24px rgba(37, 41, 79, 0.22);
+    color-scheme: light dark;
+}
+
+/* [T2]  une police pour les titres, une pour le texte */
+body {
+    font-family: var(--police-texte);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--texte);
+    background-color: var(--fond);
+}
+
+h1, h2, h3, h4,
+.navbar-brand,
+.nav-link,
+.btn {
+    font-family: var(--police-titres);
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--lien);
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+p, li {
+    max-width: 75ch;
+}
+
+.texte-doux {
+    color: var(--texte-doux);
+}
+
+a {
+    color: var(--lien);
+    text-underline-offset: 0.2em;
+}
+
+a:hover {
+    color: var(--lien);
+    text-decoration-thickness: 2px;
+}
+
+.titre-section {
+    margin-bottom: 1.5rem;
+}
+
+.section-bandeau {
+    background-color: var(--bandeau);
+    color: var(--bandeau-texte);
+}
+
+.section-bandeau h2,
+.section-bandeau h3 {
+    color: var(--bandeau-texte);
+}
+
+
+/* =========================
+   2. ACCESSIBILITE ET FOCUS*/
+
+
+:focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 3px;
+}
+
+.lien-evitement {
+    position: absolute;
+    left: 1rem;
+    top: -4rem;
+    z-index: 2000;
+    padding: 0.5rem 1rem;
+    background-color: var(--couleur-ambre);
+    color: #2d2d2d;
+    font-family: var(--police-titres);
+    font-weight: 700;
+    border-radius: 0 0 var(--rayon) var(--rayon);
+}
+
+.lien-evitement:focus-visible {
+    top: 0;
+}
+
+
+/* ========================
+   3. EN-TETE ET NAVIGATION */
+
+
+.navbar-principale {
+    --bs-navbar-padding-y: 0.75rem;
+    --bs-navbar-color: var(--entete-texte);
+    --bs-navbar-hover-color: var(--couleur-ambre);
+    --bs-navbar-active-color: var(--couleur-ambre);
+    --bs-navbar-brand-color: var(--entete-texte);
+    --bs-navbar-brand-hover-color: var(--couleur-ambre);
+    --bs-navbar-toggler-border-color: var(--couleur-creme);
+    background-color: var(--entete-fond);
+    border-bottom: 4px solid var(--couleur-ambre);
+}
+
+.navbar-principale .navbar-brand {
+    font-weight: 800;
+    font-size: 1.4rem;
+    letter-spacing: 0.02em;
+}
+
+.navbar-principale .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+.marque-pastille {
+    display: inline-block;
+    width: 0.9rem;
+    height: 0.9rem;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    background-color: var(--couleur-ambre);
+    box-shadow: 0.45rem 0 0 var(--couleur-olive);
+}
+
+.navbar-principale .nav-link {
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.5rem 0.75rem;
+    border-bottom: 3px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.navbar-principale .nav-link:hover,
+.navbar-principale .nav-link:focus-visible {
+    border-bottom-color: var(--couleur-lavande);
+}
+
+.navbar-principale .nav-link.active {
+    border-bottom-color: var(--couleur-ambre);
+    font-weight: 800;
+}
+
+.navbar-principale :focus-visible {
+    outline-color: var(--couleur-ambre);
+}
+
+
+/* ==========
+   4. BOUTONS */
+
+/* [T9] les boutons primaires : variables du
+   composant .btn-primary  avec les couleurs de la charte. */
+.btn-primary {
+    --bs-btn-color: #2d2d2d;
+    --bs-btn-bg: var(--couleur-ambre);
+    --bs-btn-border-color: var(--couleur-ambre);
+    --bs-btn-hover-color: #2d2d2d;
+    --bs-btn-hover-bg: var(--couleur-ambre-fonce);
+    --bs-btn-hover-border-color: var(--couleur-ambre-fonce);
+    --bs-btn-active-color: #2d2d2d;
+    --bs-btn-active-bg: var(--couleur-ambre-fonce);
+    --bs-btn-active-border-color: var(--couleur-ambre-fonce);
+    --bs-btn-disabled-color: #2d2d2d;
+    --bs-btn-disabled-bg: var(--couleur-ambre);
+    --bs-btn-disabled-border-color: var(--couleur-ambre);
+    --bs-btn-focus-shadow-rgb: 255, 174, 0;
+    font-weight: 700;
+}
+
+.btn-contour {
+    --bs-btn-color: var(--lien);
+    --bs-btn-bg: transparent;
+    --bs-btn-border-color: var(--lien);
+    --bs-btn-hover-color: var(--fond);
+    --bs-btn-hover-bg: var(--lien);
+    --bs-btn-hover-border-color: var(--lien);
+    --bs-btn-active-color: var(--fond);
+    --bs-btn-active-bg: var(--lien);
+    --bs-btn-active-border-color: var(--lien);
+    --bs-btn-focus-shadow-rgb: 37, 41, 79;
+    font-weight: 700;
+}
+
+/* [T8] ETATS ET TRANSITIONS  */
+.btn {
+    transition: transform 0.2s ease, box-shadow 0.2s ease,
+                background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn:hover,
+.btn:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: var(--ombre);
+}
+
+
+/* ====================================
+   5. ACCUEIL : BANDEAU ET STATISTIQUES */
+
+.bandeau-accueil {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.bandeau-accueil .accroche {
+    font-size: 1.05rem;
+}
+
+.carrousel-accueil {
+    border: 3px solid var(--couleur-ambre);
+    border-radius: var(--rayon);
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: var(--ombre-forte);
+}
+
+.carrousel-accueil .carousel-item img {
+    height: 20rem;
+    object-fit: contain;
+}
+
+.statistiques {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.statistiques li {
+    padding: 1.5rem;
+    text-align: center;
+    background-color: var(--surface);
+    color: var(--texte);
+    border-radius: var(--rayon);
+    border-top: 6px solid var(--couleur-ambre);
+    box-shadow: var(--ombre);
+}
+
+.statistique-valeur {
+    display: block;
+    font-family: var(--police-titres);
+    font-size: 2.4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--lien);
+}
+
+.note-fictive {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+}
+
+.etapes-accueil {
+    padding-left: 1.25rem;
+}
+
+.etapes-accueil li {
+    margin-bottom: 0.75rem;
+}
+
+
+/* ============
+   CATALOGUE  OUTILS ET CARTES
+    */
+
+/* [T5] FLEXBOX ecrit par moi la barre d'outils du catalogue
+   recherche, tri, filtres */
+.barre-outils {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1rem;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+    background-color: var(--surface);
+    border: 1px solid var(--bordure);
+    border-radius: var(--rayon);
+}
+
+.barre-outils .groupe-outil {
+    flex: 1 1 14rem;
+}
+
+.groupe-filtres {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.compteur-cours {
+    font-family: var(--police-titres);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* [T4] MODELE DE BOITE  la carte de cours */
+.carte-cours {
+    --bs-card-bg: var(--surface);
+    --bs-card-color: var(--texte);
+    --bs-card-border-color: var(--bordure);
+    --bs-card-border-radius: var(--rayon);
+    --bs-card-inner-border-radius: calc(var(--rayon) - 1px);
+    padding: 0.5rem;
+    border-width: 2px;
+    box-shadow: var(--ombre);
+}
+
+.carte-cours .card-img-top {
+    height: 11rem;
+    object-fit: cover;
+    border-radius: calc(var(--rayon) - 0.25rem);
+}
+
+.carte-cours .card-body {
+    padding: 1rem 0.5rem 0.5rem;
+}
+
+.carte-cours .card-title {
+    margin-bottom: 0.75rem;
+}
+
+.carte-cours .infos-cours {
+    margin: 0 0 1rem;
+    padding: 0;
+    list-style: none;
+    font-size: 0.85rem;
+}
+
+.carte-cours .infos-cours li {
+    margin-bottom: 0.25rem;
+}
+
+/* [T8] ETATS ET TRANSITIONS */
+.carte-cours {
+    transition: transform 0.2s ease, box-shadow 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.carte-cours:hover,
+.carte-cours:focus-within {
+    transform: translateY(-4px);
+    border-color: var(--couleur-ambre);
+    box-shadow: var(--ombre-forte);
+}
+
+.img-illustration {
+    object-fit: contain;
+    background-color: #ffffff;
+}
+
+.img-haut {
+    object-position: center top;
+}
+
+.fiche-a-venir {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--texte-doux);
+}
+
+
+.badge-type {
+    padding: 0.4rem 0.7rem;
+    font-family: var(--police-titres);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #2d2d2d;
+}
+
+.badge-theorique {
+    background-color: var(--couleur-lavande);
+    color: var(--couleur-nuit);
+}
+
+.badge-pratique {
+    background-color: var(--couleur-ambre);
+}
+
+.badge-examen {
+    background-color: var(--couleur-olive);
+}
+
+
+/* ==================
+   7. FICHES DE COURS */
+
+/* [T9]  le fil d'Ariane */
+.breadcrumb {
+    --bs-breadcrumb-divider-color: var(--texte-doux);
+    --bs-breadcrumb-item-active-color: var(--texte);
+    --bs-breadcrumb-font-size: 0.85rem;
+    font-family: var(--police-titres);
+}
+
+.fiche-image {
+    width: 100%;
+    border: 3px solid var(--couleur-ambre);
+    border-radius: var(--rayon);
+    box-shadow: var(--ombre);
+}
+
+.fiche-resume {
+    margin: 0 0 1.5rem;
+    padding: 1.25rem 1.5rem;
+    background-color: var(--surface);
+    border-left: 6px solid var(--couleur-ambre);
+    border-radius: var(--rayon);
+    box-shadow: var(--ombre);
+}
+
+.fiche-resume dt {
+    font-family: var(--police-titres);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--texte-doux);
+}
+
+.fiche-resume dd {
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+}
+
+.fiche-resume dd:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =============
+   8. CALENDRIER
+ */
+
+.legende-calendrier {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0 0 1rem;
+    padding: 0;
+    list-style: none;
+}
+
+.zone-tableau {
+    border: 1px solid var(--bordure);
+    border-radius: var(--rayon);
+    background-color: var(--surface);
+}
+
+/* [T10] TABLEAU STYLE -  */
+.tableau-calendrier {
+    --bs-table-bg: transparent;
+    --bs-table-color: var(--texte);
+    --bs-table-border-color: var(--bordure);
+    margin-bottom: 0;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.tableau-calendrier caption {
+    padding: 0.75rem 1rem;
+    font-family: var(--police-titres);
+    font-weight: 700;
+    color: var(--lien);
+    caption-side: top;
+    text-align: left;
+}
+
+.tableau-calendrier thead th {
+    background-color: var(--couleur-nuit);
+    color: var(--couleur-creme);
+    font-family: var(--police-titres);
+    white-space: nowrap;
+}
+
+/* [T3] SELECTEUR STRUCTUREL */
+.tableau-calendrier tbody tr:nth-child(even) {
+    background-color: rgba(186, 197, 232, 0.35);
+}
+
+.tableau-calendrier tbody th {
+    text-align: right;
+    white-space: nowrap;
+    font-family: var(--police-titres);
+}
+
+.tableau-calendrier td {
+    min-width: 7.5rem;
+    vertical-align: middle;
+}
+
+.tableau-calendrier .btn {
+    --bs-btn-padding-y: 0.2rem;
+    --bs-btn-padding-x: 0.6rem;
+    --bs-btn-font-size: 0.75rem;
+}
+
+.creneau-pris {
+    display: block;
+    font-size: 0.75rem;
+    line-height: 1.3;
+}
+
+.formulaire-rdv {
+    padding: 1.5rem;
+    background-color: var(--surface);
+    border: 1px solid var(--bordure);
+    border-radius: var(--rayon);
+    box-shadow: var(--ombre);
+}
+
+
+/* ========
+   9. SUIVI */
+
+.pourcentage-global {
+    font-family: var(--police-titres);
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--lien);
+}
+
+/* [T9] barres de progression. La largeur.. */
+.progress {
+    --bs-progress-height: 1.5rem;
+    --bs-progress-bg: var(--couleur-lavande);
+    --bs-progress-bar-bg: var(--couleur-nuit);
+    --bs-progress-bar-color: var(--couleur-creme);
+    --bs-progress-border-radius: 2rem;
+}
+
+.barre-theorie { width: 66%; }
+.barre-pratique { width: 27%; }
+.barre-examens { width: 0; }
+
+.encart-info {
+    padding: 1rem 1.25rem;
+    background-color: var(--surface);
+    border-left: 6px solid var(--couleur-olive);
+    border-radius: var(--rayon);
+    box-shadow: var(--ombre);
+}
+
+.tableau-suivi {
+    --bs-table-bg: var(--surface);
+    --bs-table-color: var(--texte);
+    --bs-table-border-color: var(--bordure);
+    --bs-table-striped-bg: rgba(186, 197, 232, 0.35);
+    --bs-table-striped-color: var(--texte);
+    --bs-table-hover-bg: rgba(255, 174, 0, 0.25);
+    --bs-table-hover-color: var(--texte);
+}
+
+.tableau-suivi thead th {
+    background-color: var(--couleur-nuit);
+    color: var(--couleur-creme);
+    font-family: var(--police-titres);
+}
+
+/* [T10] Les nombres sont alignes a droite */
+.tableau-suivi .nombre {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+
+/* =============
+   10. MONITEURS */
+
+.carte-moniteur {
+    --bs-card-bg: var(--surface);
+    --bs-card-color: var(--texte);
+    --bs-card-border-color: var(--bordure);
+    --bs-card-border-radius: var(--rayon);
+    padding: 1.5rem;
+    text-align: center;
+    border-width: 2px;
+    box-shadow: var(--ombre);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.carte-moniteur:hover,
+.carte-moniteur:focus-within {
+    transform: translateY(-4px);
+    border-color: var(--couleur-ambre);
+    box-shadow: var(--ombre-forte);
+}
+
+.monogramme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 6rem;
+    margin: 0 auto 1rem;
+    font-family: var(--police-titres);
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--couleur-nuit);
+    background-color: var(--couleur-lavande);
+    border: 4px solid var(--couleur-ambre);
+    border-radius: 50%;
+}
+
+.carte-moniteur .specialite {
+    font-family: var(--police-titres);
+    font-weight: 700;
+    color: var(--lien);
+}
+
+
+/* ================
+   11. FORMULAIRES */
+
+
+.etapes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 0 0 1.5rem;
+    padding: 0;
+    list-style: none;
+    counter-reset: etape;
+}
+
+/* [T3] SELECTEUR  */
+.etapes li:first-child {
+    font-weight: 700;
+}
+
+.etapes li {
+    flex: 1 1 10rem;
+    padding: 0.6rem 1rem;
+    font-family: var(--police-titres);
+    font-size: 0.85rem;
+    background-color: var(--surface);
+    border: 2px solid var(--bordure);
+    border-radius: var(--rayon);
+    counter-increment: etape;
+}
+
+.etapes li::before {
+    content: "\00c9tape " counter(etape) " : ";
+    font-weight: 700;
+}
+
+.formulaire-carte {
+    padding: 1.5rem;
+    background-color: var(--surface);
+    border: 1px solid var(--bordure);
+    border-radius: var(--rayon);
+    box-shadow: var(--ombre);
+}
+
+.formulaire-carte legend {
+    font-family: var(--police-titres);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--lien);
+}
+
+.obligatoire {
+    font-size: 0.8rem;
+    color: var(--texte-doux);
+}
+
+/* [T10] FORMULAIRE   */
+.form-control,
+.form-select {
+    --bs-body-bg: var(--surface);
+    --bs-body-color: var(--texte);
+    background-color: var(--surface);
+    color: var(--texte);
+    border: 2px solid var(--bordure);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background-color: var(--surface);
+    color: var(--texte);
+    border-color: var(--couleur-nuit);
+    box-shadow: 0 0 0 0.25rem rgba(255, 174, 0, 0.55);
+}
+
+.form-label,
+.form-check-label {
+    font-family: var(--police-titres);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.form-check-input:checked {
+    background-color: var(--couleur-nuit);
+    border-color: var(--couleur-nuit);
+}
+
+.form-check-input:focus {
+    border-color: var(--couleur-nuit);
+    box-shadow: 0 0 0 0.25rem rgba(255, 174, 0, 0.55);
+}
+
+/* Champ invalide apres une tentative d'envoi : bordure ET icone textuelle
+   fournie par le navigateur, pas seulement la couleur */
+.form-control:user-invalid,
+.form-select:user-invalid {
+    border-color: var(--couleur-erreur);
+}
+
+.coordonnees {
+    margin: 0;
+}
+
+.coordonnees dt {
+    font-family: var(--police-titres);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--texte-doux);
+}
+
+.coordonnees dd {
+    margin-bottom: 0.75rem;
+}
+
+.carte-ratio {
+    border: 3px solid var(--couleur-ambre);
+    border-radius: var(--rayon);
+    overflow: hidden;
+    box-shadow: var(--ombre);
+}
+
+
+/* ========
+   12. FAQ 
+    */
+
+/* [T9] PERSONNALISER BOOTSTRAP  */
+.accordion {
+    --bs-accordion-bg: var(--surface);
+    --bs-accordion-color: var(--texte);
+    --bs-accordion-border-color: var(--bordure);
+    --bs-accordion-border-radius: var(--rayon);
+    --bs-accordion-inner-border-radius: calc(var(--rayon) - 1px);
+    --bs-accordion-btn-color: var(--texte);
+    --bs-accordion-btn-bg: var(--surface);
+    --bs-accordion-active-color: var(--couleur-nuit);
+    --bs-accordion-active-bg: var(--couleur-ambre);
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(255, 174, 0, 0.55);
+}
+
+.accordion-button {
+    font-family: var(--police-titres);
+    font-size: 1rem;
+    font-weight: 700;
+    transition: background-color 0.2s ease;
+}
+
+.accordion-button:hover {
+    background-color: rgba(255, 174, 0, 0.3);
+}
+
+.accordion-button:not(.collapsed):hover {
+    background-color: var(--couleur-ambre);
+}
+
+
+/* 
+   13. PIED DE PAGE */
+
+.pied-de-page {
+    margin-top: 4rem;
+    padding: 3rem 0 1.5rem;
+    background-color: var(--entete-fond);
+    color: var(--entete-texte);
+    border-top: 4px solid var(--couleur-ambre);
+}
+
+.pied-de-page h2 {
+    font-size: 1rem;
+    color: var(--couleur-ambre);
+}
+
+/* [T3] liens du pied de page */
+.pied-de-page a {
+    color: var(--entete-texte);
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.pied-de-page a:hover,
+.pied-de-page a:focus-visible {
+    color: var(--couleur-ambre);
+}
+
+.pied-de-page :focus-visible {
+    outline-color: var(--couleur-ambre);
+}
+
+/* [T6] GRID  */
+.pied-colonnes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.pied-colonnes ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.pied-colonnes li {
+    margin-bottom: 0.4rem;
+}
+
+.pied-credits {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    font-size: 0.78rem;
+    border-top: 1px solid rgba(249, 243, 219, 0.35);
+}
+
+.pied-credits p {
+    max-width: none;
+    margin-bottom: 0.4rem;
+}
+
+
+/* ===================================
+   14. PAGES PARTICULIERES (404, MERCI)
+   =================================== */
+
+.page-message {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--surface);
+    border: 2px solid var(--bordure);
+    border-radius: var(--rayon);
+    box-shadow: var(--ombre-forte);
+}
+
+.page-message img {
+    max-height: 14rem;
+    width: auto;
+    margin-bottom: 1rem;
+}
+
+.code-404 {
+    font-family: var(--police-titres);
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--lien);
+}
+
+
+/* ==============
+   15. RESPONSIVE
+    */
+
+@media (max-width: 767px) {
+    .pied-colonnes {
+        grid-template-columns: 1fr;
+    }
+
+    .statistiques {
+        grid-template-columns: 1fr;
+    }
+
+    .barre-outils {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .carrousel-accueil .carousel-item img {
+        height: 14rem;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    .pourcentage-global {
+        font-size: 2.6rem;
+    }
+
+    .btn {
+        --bs-btn-padding-y: 0.65rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .statistiques {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .statistique-valeur {
+        font-size: 1.8rem;
+    }
+}
+
+@media print {
+    header,
+    .lien-evitement,
+    .barre-outils,
+    .carrousel-accueil,
+    .btn,
+    .pied-colonnes {
+        display: none;
+    }
+
+    body {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 11pt;
+        line-height: 1.5;
+        color: #000000;
+        background: none;
+    }
+
+    h1, h2, h3 {
+        color: #000000;
+        break-after: avoid;
+    }
+
+    .pied-de-page,
+    .section-bandeau {
+        margin-top: 1rem;
+        padding: 0.5rem 0;
+        color: #000000;
+        background: none;
+        border: 0;
+    }
+
+    .pied-de-page a,
+    a {
+        color: #000000;
+        text-decoration: underline;
+    }
+
+    main a[href]::after {
+        content: " (" attr(href) ")";
+        font-size: 9pt;
+    }
+
+    .carte-cours,
+    .carte-moniteur,
+    .fiche-resume,
+    .statistiques li {
+        box-shadow: none;
+        border: 1px solid #000000;
+        break-inside: avoid;
+    }
+}
+
+
+

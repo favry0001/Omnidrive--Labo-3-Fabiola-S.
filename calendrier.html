@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calendrier  OmniDrive</title>
+    <meta name="description" content="Le calendrier hebdomadaire des cours et des leçons d'OmniDrive, avec les créneaux libres à réserver.">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Roboto+Mono:wght@400;700&amp;display=swap">
+
+    
+    <link rel="stylesheet" href="vendor/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="lien-evitement" href="#contenu">Aller au contenu</a>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-principale" aria-label="Navigation principale">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><span class="marque-pastille" aria-hidden="true"></span>OmniDrive</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#menu" aria-controls="menu"
+                    aria-expanded="false" aria-label="Ouvrir le menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cours.html">Cours</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="calendrier.html">Calendrier</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="suivi.html">Mon suivi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="moniteurs.html">Moniteurs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="inscription.html">Inscription</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main id="contenu" class="container py-5">
+
+    <h1>Calendrier des rendez-vous</h1>
+    <p>Consulte la semaine, repère les créneaux libres et prends rendez-vous. Chaque type de séance a son étiquette et sa couleur.</p>
+
+    <h2 class="visually-hidden">Légende et navigation</h2>
+    <ul class="legende-calendrier">
+        <li><span class="badge badge-type badge-theorique">Théorique</span></li>
+        <li><span class="badge badge-type badge-pratique">Pratique</span></li>
+        <li><span class="badge badge-type badge-examen">Examen</span></li>
+    </ul>
+
+    
+    <p class="d-flex flex-wrap gap-2">
+        <button type="button" class="btn btn-contour btn-sm">Semaine précédente</button>
+        <button type="button" class="btn btn-contour btn-sm">Aujourd'hui</button>
+        <button type="button" class="btn btn-contour btn-sm">Semaine suivante</button>
+    </p>
+
+    
+    <div class="table-responsive zone-tableau mb-5" tabindex="0" role="region" aria-label="Calendrier de la semaine (défilement horizontal possible sur téléphone)">
+        <table class="table tableau-calendrier align-middle">
+            <caption>Semaine du 12 au 17 octobre 2026</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Heure</th>
+                    <th scope="col">Lun. 12</th><th scope="col">Mar. 13</th><th scope="col">Mer. 14</th><th scope="col">Jeu. 15</th><th scope="col">Ven. 16</th><th scope="col">Sam. 17</th>
+                </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                        <th scope="row">9 h</th>
+                        <td>
+                            <span class="badge badge-type badge-theorique">Théorique</span>
+                            <span class="creneau-pris">Cours de théorie</span></td>
+                        <td>
+                            <button type="button" class="btn btn-primary" aria-label="Réserver le mardi 13 octobre à 9 h">Réserver</button>
+                        </td>
+                        <td>
+                            <span class="badge badge-type badge-pratique">Pratique</span>
+                            <span class="creneau-pris">Leçon de conduite</span>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-primary" aria-label="Réserver le jeudi 15 octobre à 9 h">Réserver</button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-primary" aria-label="Réserver le vendredi 16 octobre à 9 h">Réserver</button>
+                        </td>
+                        <td>
+                            <span class="badge badge-type badge-pratique">Pratique</span>
+                            <span class="creneau-pris">Leçon de conduite</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">11 h</th>
+                        <td>
+                            <button type="button" class="btn btn-primary" aria-label="Réserver le lundi 12 octobre à 11 h">Réserver</button>
+                        </td>
+                        <td>
+                            <span class="badge badge-type badge-pratique">Pratique</span><span class="creneau-pris">Leçon de conduite</span>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-primary" aria-label="Réserver le mercredi 14 octobre à 11 h">Réserver</button>
+                        </td>
+                        <td>
+                            <span class="badge badge-type badge-theorique">Théorique</span>
+                            <span class="creneau-pris">Cours de théorie</span>
+                        </td>
+                        <td>
+                            <span class="badge badge-type badge-pratique">Pratique</span>
+                            <span class="creneau-pris">Leçon de conduite</span>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-primary" aria-label="Réserver le samedi 17 octobre à 11 h">Réserver</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">13 h</th>
+                        <td>
+                            <span class="badge badge-type badge-pratique">Pratique</span>
+                            <span class="creneau-pris">Leçon de conduite</span>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-primary" aria-label="Réserver le mardi 13 octobre à 13 h">Réserver</button>
+                        </td>
+                        <td>
+                            <span class="badge badge-type badge-theorique">Théorique</span>
+                            <span class="creneau-pris">Cours de théorie</span>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-primary" aria-label="Réserver le jeudi 15 octobre à 13 h">Réserver</button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-primary" aria-label="Réserver le vendredi 16 octobre à 13 h">Réserver</button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-primary" aria-label="Réserver le samedi 17 octobre à 13 h">Réserver</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">15 h</th>
+                        <td>
+                            <button type="button" class="btn btn-primary" aria-label="Réserver le lundi 12 octobre à 15 h">Réserver</button>
+                        </td>
+                        <td>
+                            <span class="badge badge-type badge-theorique">Théorique</span>
+                            <span class="creneau-pris">Cours de théorie</span>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-primary" aria-label="Réserver le mercredi 14 octobre à 15 h">Réserver</button>
+                        </td>
+                        <td>
+                            <span class="badge badge-type badge-pratique">Pratique</span>
+                            <span class="creneau-pris">Leçon de conduite</span>
+                        </td>
+                        <td>
+                            <span class="badge badge-type badge-examen">Examen</span>
+                            <span class="creneau-pris">Examen simulé</span>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-primary" aria-label="Réserver le samedi 17 octobre à 15 h">Réserver</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">17 h</th>
+                        <td>
+                            <button type="button" class="btn btn-primary" aria-label="Réserver le lundi 12 octobre à 17 h">Réserver</button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-primary" aria-label="Réserver le mardi 13 octobre à 17 h">Réserver</button>
+                        </td>
+                        <td>
+                            <span class="badge badge-type badge-pratique">Pratique</span>
+                            <span class="creneau-pris">Leçon de conduite</span>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-primary" aria-label="Réserver le jeudi 15 octobre à 17 h">Réserver</button>
+                        </td>
+                        <td>
+                            <span class="badge badge-type badge-theorique">Théorique</span>
+                            <span class="creneau-pris">Cours de théorie</span>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-primary" aria-label="Réserver le samedi 17 octobre à 17 h">Réserver</button>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <section aria-labelledby="titre-rdv">
+        <h2 id="titre-rdv">Prendre un rendez-vous</h2>
+        <form class="formulaire-rdv" action="merci.html" method="get">
+            <div class="row g-3">
+                <div class="col-12 col-md-4">
+                    <label for="rdv-type" class="form-label">Type de séance</label>
+                    <select id="rdv-type" name="type" class="form-select" required>
+                        <option value="">Choisir…</option>
+                        <option value="theorique">Cours théorique</option>
+                        <option value="pratique">Leçon pratique</option>
+                        <option value="examen">Examen</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-4">
+                    <label for="rdv-date" class="form-label">Date</label>
+                    <input type="date" id="rdv-date" name="date" class="form-control" min="2026-10-12" max="2026-12-18" required>
+                </div>
+                <div class="col-12 col-md-4">
+                    <label for="rdv-heure" class="form-label">Heure</label>
+                    <select id="rdv-heure" name="heure" class="form-select" required>
+                        <option value="">Choisir…</option>
+                        <option value="9">9 h</option>
+                        <option value="11">11 h</option>
+                        <option value="13">13 h</option>
+                        <option value="15">15 h</option>
+                        <option value="17">17 h</option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Demander ce rendez-vous</button>
+        </form>
+    </section>
+
+</main>
+
+<footer class="pied-de-page">
+    <div class="container">
+        <div class="pied-colonnes">
+            <div>
+                <h2>OmniDrive</h2>
+                <p>Le portail de gestion pour école de conduite : cours, suivi des heures, rendez-vous et fiches des moniteurs.</p>
+            </div>
+            <div>
+                <h2>Plan du site</h2>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="cours.html">Cours</a></li>
+                    <li><a href="calendrier.html">Calendrier</a></li>
+                    <li><a href="suivi.html">Mon suivi</a></li>
+                    <li><a href="moniteurs.html">Moniteurs</a></li>
+                    <li><a href="inscription.html">Inscription</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Nous joindre</h2>
+                <p>123, rue de la Conduite<br>Montréal (Québec)<br>Téléphone : 514 555-0142<br>Courriel : info@omnidrive.example</p>
+            </div>
+        </div>
+        <div class="pied-credits">
+            <p>Crédits des images : les neuf visuels du site panneaux, illustrations et photos de conduite ont été trouvés en ligne, sur Pinterest. </p>
+            <p>Polices : Montserrat et Roboto Mono Google Fonts, licence SIL OFL. Framework : Bootstrap 5.3 .</p>
+            <p>© 2026 OmniDrive. Tous droits réservés. ⛐💨</p>
+        </div>
+    </div>
+</footer>
+
+<script src="vendor/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accueil - OmniDrive</title>
+    <meta name="description" content="OmniDrive le portail web de l'école de conduite pour suivre ta progression, réserver tes leçons et connaître tes moniteurs.">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Roboto+Mono:wght@400;700&amp;display=swap">
+
+    
+    <link rel="stylesheet" href="vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+   
+    <script src="js/theme.js"></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<a class="lien-evitement" href="#contenu">Aller au contenu</a>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-principale" aria-label="Navigation principale">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><span class="marque-pastille" aria-hidden="true"></span>OmniDrive</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#menu" aria-controls="menu"
+                    aria-expanded="false" aria-label="Ouvrir le menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cours.html">Cours</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="calendrier.html">Calendrier</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="suivi.html">Mon suivi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="moniteurs.html">Moniteurs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="inscription.html">Inscription</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" id="bouton-theme" class="btn bouton-theme" aria-label="Activer le mode sombre">Mode sombre</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main id="contenu">
+
+    <section class="container bandeau-accueil" aria-labelledby="titre-accueil">
+        <div class="row align-items-center g-4">
+            <div class="col-12 col-lg-6">
+                <h1 id="titre-accueil">Ton permis de conduire, étape par étape</h1>
+                <p class="accroche">OmniDrive réunit au même endroit le catalogue des cours théoriques et pratiques, le suivi de tes heures, la prise de rendez-vous et les fiches de tes moniteurs. Fini les rendez-vous notés sur papier tu sais toujours où tu en es !</p>
+                <p class="d-flex flex-wrap gap-2">
+                    <a class="btn btn-primary btn-lg" href="suivi.html">Mon suivi</a>
+                    <a class="btn btn-contour btn-lg" href="calendrier.html">Prendre rendez-vous</a>
+                </p>
+            </div>
+            <div class="col-12 col-lg-6">
+<!-- Composant Bootstrap n° 1 carrousel -->
+                <div id="carrousel-accueil" class="carousel slide carrousel-accueil" data-bs-theme="dark" role="region" aria-label="Images de la formation à la conduite">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carrousel-accueil" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Image 1 sur 3"></button>
+                        <button type="button" data-bs-target="#carrousel-accueil" data-bs-slide-to="1" aria-label="Image 2 sur 3"></button>
+                        <button type="button" data-bs-target="#carrousel-accueil" data-bs-slide-to="2" aria-label="Image 3 sur 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/intro_f3.jpg" class="d-block w-100 img-fluid img-illustration" alt="Voiture orange devant une plaque verte portant la lettre B, avec un mortier de diplômé et un feu de circulation" width="683" height="655">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/feu_f2.jpg" class="d-block w-100 img-fluid img-illustration" alt="Feu tricolore entouré de panneaux routiers : piste cyclable, sens interdit, stop, rond-point et virage" width="735" height="764" loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/autoblk_f1.jpg" class="d-block w-100 img-fluid img-illustration" alt="Voiture blanche entourée de panneaux : demi-tour interdit, limite de 50, interdiction de dépasser et stop" width="600" height="392" loading="lazy">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carrousel-accueil" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Image précédente</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carrousel-accueil" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Image suivante</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-bandeau py-5" aria-labelledby="titre-stats">
+        <div class="container">
+            <h2 id="titre-stats" class="titre-section">OmniDrive en quelques chiffres</h2>
+            <ul class="statistiques">
+                <li><span class="statistique-valeur">1 200</span>élèves accompagnés</li>
+                <li><span class="statistique-valeur">93 %</span>de réussite à l'examen</li>
+                <li><span class="statistique-valeur">12</span>cours théoriques, pratiques et examens</li>
+            </ul>
+            
+        </div>
+    </section>
+
+    <section class="container py-5" aria-labelledby="titre-prochains">
+        <h2 id="titre-prochains" class="titre-section">Prochains cours</h2>
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card carte-cours h-100">
+                    <img src="images/driving-theory_ecran.jpg" class="card-img-top img-fluid" alt="Ordinateur portable affichant un module sur la signalisation routière, devant des cahiers de notes ouverts" width="736" height="981" loading="lazy">
+                    <div class="card-body d-flex flex-column">
+                        <p class="mb-2"><span class="badge badge-type badge-theorique">Théorique</span></p>
+                        <h3 class="card-title">Signalisation routière</h3>
+                        <ul class="infos-cours">
+                            <li>Durée : 3 h</li>
+                            <li>Moniteur : Sophie Nguyen</li>
+                            <li>Prochaine séance : <time datetime="2026-10-19">19 oct. 2026</time></li>
+                        </ul>
+                        <a class="btn btn-primary mt-auto align-self-start" href="fiche-cours-theorie.html">Voir la fiche du cours<span class="visually-hidden"> Signalisation routière</span></a>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card carte-cours h-100">
+                    <img src="images/cours4.jpg" class="card-img-top img-fluid" alt="Conducteur au regard sérieux, les mains sur le volant, vu de face à travers le pare-brise" width="735" height="482" loading="lazy">
+                    <div class="card-body d-flex flex-column">
+                        <p class="mb-2"><span class="badge badge-type badge-pratique">Pratique</span></p>
+                        <h3 class="card-title">Conduite en ville</h3>
+                        <ul class="infos-cours">
+                            <li>Durée : 4 leçons de 1 h</li>
+                            <li>Moniteur : Marc Lavoie</li>
+                            <li>Prochaine séance : <time datetime="2026-10-22">22 oct. 2026</time></li>
+                        </ul>
+                        <a class="btn btn-primary mt-auto align-self-start" href="fiche-cours-pratique.html">Voir la fiche du cours<span class="visually-hidden"> Conduite en ville</span></a>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card carte-cours h-100">
+                    <img src="images/cours3.jpg" class="card-img-top img-fluid" alt="Carte de félicitations rose et étoilée « You've passed your driving test! » avec un panneau d'apprentie conductrice" width="540" height="960" loading="lazy">
+                    <div class="card-body d-flex flex-column">
+                        <p class="mb-2"><span class="badge badge-type badge-examen">Examen</span></p>
+                        <h3 class="card-title">Examen théorique simulé</h3>
+                        <ul class="infos-cours">
+                            <li>Durée : 1 h</li>
+                            <li>Moniteur : Karim Benali</li>
+                            <li>Prochaine séance : <time datetime="2026-11-10">10 nov. 2026</time></li>
+                        </ul>
+                        <p class="fiche-a-venir mt-auto mb-0">Fiche détaillée à venir.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <p class="mt-4"><a href="cours.html">Voir le catalogue complet des cours</a></p>
+    </section>
+
+    <section class="container pb-4" aria-labelledby="titre-etapes">
+        <h2 id="titre-etapes" class="titre-section">Comment ça marche</h2>
+        <ol class="etapes-accueil">
+            <li>Inscris-toi à l'école avec le formulaire d'inscription.</li>
+            <li>Choisis tes cours dans le catalogue et réserve un créneau au calendrier.</li>
+            <li>Suis ton avancement heure par heure jusqu'à l'examen.</li>
+        </ol>
+    </section>
+
+</main>
+
+<footer class="pied-de-page">
+    <div class="container">
+        <div class="pied-colonnes">
+            <div>
+                <h2>OmniDrive</h2>
+                <p>Le portail de gestion pour école de conduite : cours, suivi des heures, rendez-vous et fiches des moniteurs.</p>
+            </div>
+            <div>
+                <h2>Plan du site</h2>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="cours.html">Cours</a></li>
+                    <li><a href="calendrier.html">Calendrier</a></li>
+                    <li><a href="suivi.html">Mon suivi</a></li>
+                    <li><a href="moniteurs.html">Moniteurs</a></li>
+                    <li><a href="inscription.html">Inscription</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Nous joindre</h2>
+                <p>123, rue de la Conduite<br>Montréal (Québec)<br>Téléphone : 514 555-0142<br>Courriel : info@omnidrive.example</p>
+            </div>
+        </div>
+        <div class="pied-credits">
+            <p>Crédits des images : les neuf visuels du site panneaux, illustrations et photos de conduite ont été trouvés en ligne, sur Pinterest. </p>
+            <p>Polices : Montserrat et Roboto Mono Google Fonts, licence SIL OFL. Framework : Bootstrap 5.3.</p>
+            <p>© 2026 OmniDrive. Tous droits réservés. ⛐💨</p>
+        </div>
+    </div>
+</footer>
+
+<script src="vendor/bootstrap.bundle.min.js"></script>
+</body>
+</html>

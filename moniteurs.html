@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Moniteurs - OmniDrive</title>
+    <meta name="description" content="Les moniteurs d'OmniDrive : spécialité, expérience et présentation de chaque membre de l'équipe.">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Roboto+Mono:wght@400;700&amp;display=swap">
+
+    
+    <link rel="stylesheet" href="vendor/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="lien-evitement" href="#contenu">Aller au contenu</a>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-principale" aria-label="Navigation principale">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><span class="marque-pastille" aria-hidden="true"></span>OmniDrive</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#menu" aria-controls="menu"
+                    aria-expanded="false" aria-label="Ouvrir le menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cours.html">Cours</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="calendrier.html">Calendrier</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="suivi.html">Mon suivi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="moniteurs.html">Moniteurs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="inscription.html">Inscription</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main id="contenu" class="container py-5">
+
+    <h1>Nos moniteurs</h1>
+    <p>Une équipe qui t'accompagne de la première leçon jusqu'à l'examen! Chaque fiche présente la spécialité et l'expérience du moniteur.</p>
+
+    
+    <div class="barre-outils">
+        <div class="groupe-outil">
+            <label for="recherche-moniteur" class="form-label">Rechercher un moniteur</label>
+            <input type="search" id="recherche-moniteur" name="recherche-moniteur" class="form-control" placeholder="Au moins 3 lettres" autocomplete="off">
+        </div>
+    </div>
+
+    <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card carte-moniteur h-100">
+                    <div class="monogramme" aria-hidden="true">ML</div>
+                    <h2 class="h4">Marc Lavoie</h2>
+                    <p class="specialite">Conduite en ville et manœuvres</p>
+                    <p>15 ans d'expérience</p>
+                    <p>Marc enseigne avec calme et méthode. Il prépare les élèves au stationnement, aux intersections achalandées et à la conduite hivernale.</p>
+                    <p class="mt-auto mb-0"><a href="cours.html">Voir les cours de Marc Lavoie</a></p>
+                </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card carte-moniteur h-100">
+                    <div class="monogramme" aria-hidden="true">SN</div>
+                    <h2 class="h4">Sophie Nguyen</h2>
+                    <p class="specialite">Cours théoriques et signalisation</p>
+                    <p>9 ans d'expérience</p>
+                    <p>Sophie anime les cours de théorie en petit groupe. Elle utilise des exemples du quotidien pour rendre la signalisation facile à retenir.</p>
+                    <p class="mt-auto mb-0"><a href="cours.html">Voir les cours de Sophie Nguyen</a></p>
+                </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card carte-moniteur h-100">
+                    <div class="monogramme" aria-hidden="true">KB</div>
+                    <h2 class="h4">Karim Benali</h2>
+                    <p class="specialite">Préparation à l'examen et conduite préventive</p>
+                    <p>12 ans d'expérience</p>
+                    <p>Karim insiste sur les bons réflexes et la gestion du stress. Il organise des examens simulés avant le grand jour.</p>
+                    <p class="mt-auto mb-0"><a href="cours.html">Voir les cours de Karim Benali</a></p>
+                </article>
+            </div>
+    </div>
+    <p class="note-fictive">Moniteurs fictifs, créés pour ce projet.</p>
+
+</main>
+
+<footer class="pied-de-page">
+    <div class="container">
+        <div class="pied-colonnes">
+            <div>
+                <h2>OmniDrive</h2>
+                <p>Le portail de gestion pour école de conduite  cours, suivi des heures, rendez-vous et fiches des moniteurs.</p>
+            </div>
+            <div>
+                <h2>Plan du site</h2>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="cours.html">Cours</a></li>
+                    <li><a href="calendrier.html">Calendrier</a></li>
+                    <li><a href="suivi.html">Mon suivi</a></li>
+                    <li><a href="moniteurs.html">Moniteurs</a></li>
+                    <li><a href="inscription.html">Inscription</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Nous joindre</h2>
+                <p>123, rue de la Conduite<br>Montréal (Québec)<br>Téléphone : 514 555-0142<br>Courriel : info@omnidrive.ca</p>
+            </div>
+        </div>
+        <div class="pied-credits">
+            <p>Crédits des images : les neuf visuels du site panneaux, illustrations et photos de conduite ont été trouvés en ligne, sur Pinterest. </p>
+            <p>Polices : Montserrat et Roboto Mono Google Fonts, licence SIL OFL. Framework : Bootstrap 5.3 .</p>
+            <p>© 2026 OmniDrive. Tous droits réservés. ⛐💨</p>
+        </div>
+    </div>
+</footer>
+
+<script src="vendor/bootstrap.bundle.min.js"></script>
+</body>
+</html>

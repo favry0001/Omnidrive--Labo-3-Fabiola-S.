@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Catalogue des cours - OmniDrive</title>
+    <meta name="description" content="Les 12 cours d'OmniDrive : théorie, pratique et examens, avec la durée, le moniteur et la prochaine séance.">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Roboto+Mono:wght@400;700&amp;display=swap">
+
+    
+    <link rel="stylesheet" href="vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="lien-evitement" href="#contenu">Aller au contenu</a>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-principale" aria-label="Navigation principale">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><span class="marque-pastille" aria-hidden="true"></span>OmniDrive</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#menu" aria-controls="menu"
+                    aria-expanded="false" aria-label="Ouvrir le menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="cours.html">Cours</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="calendrier.html">Calendrier</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="suivi.html">Mon suivi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="moniteurs.html">Moniteurs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="inscription.html">Inscription</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main id="contenu" class="container py-5">
+
+    <h1>Catalogue des cours</h1>
+    <p>Douze cours pour passer de la théorie à l'examen. Chaque carte indique la catégorie, la durée, le moniteur et la prochaine séance.</p>
+
+    <h2 class="visually-hidden">Rechercher, filtrer et trier</h2>
+    <div class="barre-outils">
+        
+        <div class="groupe-outil">
+            <label for="recherche" class="form-label">Rechercher un cours</label>
+            <input type="search" id="recherche" name="recherche" class="form-control" placeholder="Au moins 3 lettres" autocomplete="off">
+        </div>
+
+        <div class="groupe-outil">
+            <label for="tri" class="form-label">Trier par</label>
+            <select id="tri" name="tri" class="form-select">
+                <option value="nom">Nom A à Z</option>
+                <option value="duree">Durée</option>
+                <option value="date">Prochaine séance</option>
+            </select>
+        </div>
+
+        <div class="groupe-outil">
+            <p class="form-label mb-2" id="etiquette-filtres">Filtrer par catégorie</p>
+            <div class="groupe-filtres" role="group" aria-labelledby="etiquette-filtres">
+                <button type="button" class="btn btn-primary btn-sm" aria-pressed="true">Tous</button>
+                <button type="button" class="btn btn-contour btn-sm" aria-pressed="false">Théorique</button>
+                <button type="button" class="btn btn-contour btn-sm" aria-pressed="false">Pratique</button>
+                <button type="button" class="btn btn-contour btn-sm" aria-pressed="false">Examen</button>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="compteur-cours">12 cours</h2>
+    
+    <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card carte-cours h-100">
+                    <img src="images/driving-theory_ecran.jpg" class="card-img-top img-fluid" alt="Ordinateur portable affichant un module sur la signalisation routière, devant des cahiers de notes ouverts" width="736" height="981" loading="lazy">
+                    <div class="card-body d-flex flex-column">
+                        <p class="mb-2"><span class="badge badge-type badge-theorique">Théorique</span></p>
+                        <h3 class="card-title">Signalisation routière</h3>
+                        <ul class="infos-cours">
+                            <li>Durée : 3 h</li>
+                            <li>Moniteur : Sophie Nguyen</li>
+                            <li>Prochaine séance : <time datetime="2026-10-19">19 oct. 2026</time></li>
+                        </ul>
+                        <a class="btn btn-primary mt-auto align-self-start" href="fiche-cours-theorie.html">Voir la fiche du cours<span class="visually-hidden"> Signalisation routière</span></a>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card carte-cours h-100">
+                    <img src="images/cours1.jpg" class="card-img-top img-fluid" alt="Panneau d'arrêt rouge portant le message « Warning : new driver on the road! » devant un ciel bleu" width="736" height="732" loading="lazy">
+                    <div class="card-body d-flex flex-column">
+                        <p class="mb-2"><span class="badge badge-type badge-theorique">Théorique</span></p>
+                        <h3 class="card-title">Priorités et intersections</h3>
+                        <ul class="infos-cours">
+                            <li>Durée : 3 h</li>
+                            <li>Moniteur : Sophie Nguyen</li>
+                            <li>Prochaine séance : <time datetime="2026-10-21">21 oct. 2026</time></li>
+                        </ul>
+                        <p class="fiche-a-venir mt-auto mb-0">Fiche détaillée à venir.</p>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card carte-cours h-100">
+                    <img src="images/feu_f2.jpg" class="card-img-top img-fluid img-illustration" alt="Feu tricolore entouré de panneaux routiers : piste cyclable, sens interdit, stop, rond-point et virage" width="735" height="764" loading="lazy">
+                    <div class="card-body d-flex flex-column">
+                        <p class="mb-2"><span class="badge badge-type badge-theorique">Théorique</span></p>
+                        <h3 class="card-title">Conduite préventive</h3>
+                        <ul class="infos-cours">
+                            <li>Durée : 2 h</li>
+                            <li>Moniteur : Karim Benali</li>
+                            <li>Prochaine séance : <time datetime="2026-10-26">26 oct. 2026</time></li>
+                        </ul>
+                        <p class="fiche-a-venir mt-auto mb-0">Fiche détaillée à venir.</p>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card carte-cours h-100">
+                    <img src="images/cours1.jpg" class="card-img-top img-fluid" alt="Panneau d'arrêt rouge portant le message « Warning : new driver on the road! » devant un ciel bleu" width="736" height="732" loading="lazy">
+                    <div class="card-body d-flex flex-column">
+                        <p class="mb-2"><span class="badge badge-type badge-theorique">Théorique</span></p>
+                        <h3 class="card-title">Alcool, drogues et fatigue au volant</h3>
+                        <ul class="infos-cours">
+                            <li>Durée : 2 h</li>
+                            <li>Moniteur : Karim Benali</li>
+                            <li>Prochaine séance : <time datetime="2026-10-28">28 oct. 2026</time></li>
+                        </ul>
+                        <p class="fiche-a-venir mt-auto mb-0">Fiche détaillée à venir.</p>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card carte-cours h-100">
+                    <img src="images/driving-theory_ecran.jpg" class="card-img-top img-fluid" alt="Ordinateur portable affichant un module sur la signalisation routière, devant des cahiers de notes ouverts" width="736" height="981" loading="lazy">
+                    <div class="card-body d-flex flex-column">
+                        <p class="mb-2"><span class="badge badge-type badge-theorique">Théorique</span></p>
+                        <h3 class="card-title">Documents, assurance et infractions</h3>
+                        <ul class="infos-cours">
+                            <li>Durée : 3 h</li>
+                            <li>Moniteur : Sophie Nguyen</li>
+                            <li>Prochaine séance : <time datetime="2026-11-02">2 nov. 2026</time></li>
+                        </ul>
+                        <p class="fiche-a-venir mt-auto mb-0">Fiche détaillée à venir.</p>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card carte-cours h-100">
+                    <img src="images/goals-1.jpg" class="card-img-top img-fluid" alt="Collage de six photos de conductrices au volant avec le texte « Goal #1 : learn to drive »" width="736" height="887" loading="lazy">
+                    <div class="card-body d-flex flex-column">
+                        <p class="mb-2"><span class="badge badge-type badge-pratique">Pratique</span></p>
+                        <h3 class="card-title">Prise en main du véhicule</h3>
+                        <ul class="infos-cours">
+                            <li>Durée : 2 leçons de 1 h</li>
+                            <li>Moniteur : Marc Lavoie</li>
+                            <li>Prochaine séance : <time datetime="2026-10-20">20 oct. 2026</time></li>
+                        </ul>
+                        <p class="fiche-a-venir mt-auto mb-0">Fiche détaillée à venir.</p>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card carte-cours h-100">
+                    <img src="images/cours4.jpg" class="card-img-top img-fluid" alt="Conducteur au regard sérieux, les mains sur le volant, vu de face à travers le pare-brise" width="735" height="482" loading="lazy">
+                    <div class="card-body d-flex flex-column">
+                        <p class="mb-2"><span class="badge badge-type badge-pratique">Pratique</span></p>
+                        <h3 class="card-title">Conduite en ville</h3>
+                        <ul class="infos-cours">
+                            <li>Durée : 4 leçons de 1 h</li>
+                            <li>Moniteur : Marc Lavoie</li>
+                            <li>Prochaine séance : <time datetime="2026-10-22">22 oct. 2026</time></li>
+                        </ul>
+                        <a class="btn btn-primary mt-auto align-self-start" href="fiche-cours-pratique.html">Voir la fiche du cours<span class="visually-hidden"> Conduite en ville</span></a>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card carte-cours h-100">
+                    <img src="images/goals-1.jpg" class="card-img-top img-fluid" alt="Collage de six photos de conductrices au volant avec le texte « Goal #1 : learn to drive »" width="736" height="887" loading="lazy">
+                    <div class="card-body d-flex flex-column">
+                        <p class="mb-2"><span class="badge badge-type badge-pratique">Pratique</span></p>
+                        <h3 class="card-title">Stationnement et manœuvres</h3>
+                        <ul class="infos-cours">
+                            <li>Durée : 3 leçons de 1 h</li>
+                            <li>Moniteur : Marc Lavoie</li>
+                            <li>Prochaine séance : <time datetime="2026-10-27">27 oct. 2026</time></li>
+                        </ul>
+                        <p class="fiche-a-venir mt-auto mb-0">Fiche détaillée à venir.</p>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card carte-cours h-100">
+                    <img src="images/cours4.jpg" class="card-img-top img-fluid" alt="Conducteur au regard sérieux, les mains sur le volant, vu de face à travers le pare-brise" width="735" height="482" loading="lazy">
+                    <div class="card-body d-flex flex-column">
+                        <p class="mb-2"><span class="badge badge-type badge-pratique">Pratique</span></p>
+                        <h3 class="card-title">Autoroute et voies rapides</h3>
+                        <ul class="infos-cours">
+                            <li>Durée : 3 leçons de 1 h</li>
+                            <li>Moniteur : Karim Benali</li>
+                            <li>Prochaine séance : <time datetime="2026-11-03">3 nov. 2026</time></li>
+                        </ul>
+                        <p class="fiche-a-venir mt-auto mb-0">Fiche détaillée à venir.</p>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card carte-cours h-100">
+                    <img src="images/goals-1.jpg" class="card-img-top img-fluid" alt="Collage de six photos de conductrices au volant avec le texte « Goal #1 : learn to drive »" width="736" height="887" loading="lazy">
+                    <div class="card-body d-flex flex-column">
+                        <p class="mb-2"><span class="badge badge-type badge-pratique">Pratique</span></p>
+                        <h3 class="card-title">Conduite de nuit et météo difficile</h3>
+                        <ul class="infos-cours">
+                            <li>Durée : 3 leçons de 1 h</li>
+                            <li>Moniteur : Marc Lavoie</li>
+                            <li>Prochaine séance : <time datetime="2026-11-05">5 nov. 2026</time></li>
+                        </ul>
+                        <p class="fiche-a-venir mt-auto mb-0">Fiche détaillée à venir.</p>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card carte-cours h-100">
+                    <img src="images/cours3.jpg" class="card-img-top img-fluid" alt="Carte de félicitations rose et étoilée « You've passed your driving test! » avec un panneau d'apprentie conductrice" width="540" height="960" loading="lazy">
+                    <div class="card-body d-flex flex-column">
+                        <p class="mb-2"><span class="badge badge-type badge-examen">Examen</span></p>
+                        <h3 class="card-title">Examen théorique simulé</h3>
+                        <ul class="infos-cours">
+                            <li>Durée : 1 h</li>
+                            <li>Moniteur : Karim Benali</li>
+                            <li>Prochaine séance : <time datetime="2026-11-10">10 nov. 2026</time></li>
+                        </ul>
+                        <p class="fiche-a-venir mt-auto mb-0">Fiche détaillée à venir.</p>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card carte-cours h-100">
+                    <img src="images/cours2.jpg" class="card-img-top img-fluid img-haut" alt="Conductrice en lunettes de soleil, la main levée, au volant, avec la légende « I passed my driving test »" width="736" height="736" loading="lazy">
+                    <div class="card-body d-flex flex-column">
+                        <p class="mb-2"><span class="badge badge-type badge-examen">Examen</span></p>
+                        <h3 class="card-title">Examen pratique de conduite</h3>
+                        <ul class="infos-cours">
+                            <li>Durée : 1 h</li>
+                            <li>Moniteur : Marc Lavoie</li>
+                            <li>Prochaine séance : <time datetime="2026-11-17">17 nov. 2026</time></li>
+                        </ul>
+                        <p class="fiche-a-venir mt-auto mb-0">Fiche détaillée à venir.</p>
+                    </div>
+                </article>
+            </div>
+    </div>
+
+</main>
+
+<footer class="pied-de-page">
+    <div class="container">
+        <div class="pied-colonnes">
+            <div>
+                <h2>OmniDrive</h2>
+                <p>Le portail de gestion pour école de conduite  cours, suivi des heures, rendez-vous et fiches des moniteurs.</p>
+            </div>
+            <div>
+                <h2>Plan du site</h2>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="cours.html">Cours</a></li>
+                    <li><a href="calendrier.html">Calendrier</a></li>
+                    <li><a href="suivi.html">Mon suivi</a></li>
+                    <li><a href="moniteurs.html">Moniteurs</a></li>
+                    <li><a href="inscription.html">Inscription</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Nous joindre</h2>
+                <p>123, rue de la Conduite<br>Montréal (Québec)<br>Téléphone : 514 555-0142<br>Courriel : info@omnidrive.example</p>
+            </div>
+        </div>
+        <div class="pied-credits">
+           <p>Crédits des images : les neuf visuels du site panneaux, illustrations et photos de conduite ont été trouvés en ligne, sur Pinterest. </p>
+           <p>Polices : Montserrat et Roboto Mono Google Fonts, licence SIL OFL. Framework : Bootstrap 5.3 .</p>
+           <p>© 2026 OmniDrive. Tous droits réservés. ⛐💨</p>
+    </div>
+</footer>
+
+<script src="vendor/bootstrap.bundle.min.js"></script>
+</body>
+</html>
