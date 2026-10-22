@@ -1,0 +1,17 @@
+Declaration d'utilisation de l'intelligence artificielle - Laboratoire 3
+Etudiante : Fabiola Sainvry 
+
+Outils d'IA utilises
+- Gemini  : Aide pour le stucture  du fichier  css et les composition.
+ le js/script.js theme clair/sombre, car le mode sombre ne s'activait pas et le boutton était placé au mauvaise endroit , mode sombre et
+  reorganisation de css/style.css, verifications validateur W3C, tests dans un navigateur,
+  aide pour organiser mes idees et pour preparer mes explications du code.
+
+
+Autres sources
+- Notes de cours et exemples faits en classe
+- W3Schools
+- GeeksforGeeks
+
+
+

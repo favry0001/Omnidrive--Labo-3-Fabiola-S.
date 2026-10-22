@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="vendor/bootstrap.min.css">
     
     <link rel="stylesheet" href="css/style.css">
+    <!-- theme.js -->
+    <script src="js/theme.js"></script>
+    <script src="js/script.js" defer></script>
 </head>
 <body>
 
@@ -54,6 +57,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
                     </li>
+                    <li class="nav-item">
+                        <button type="button" id="bouton-theme" class="btn bouton-theme" aria-label="Activer le mode sombre">Mode sombre</button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -73,8 +79,9 @@
 
     <div class="row g-4">
         <div class="col-12 col-lg-8">
-            <!-- F-09 : validation en temps réel et message de confirmation. Seule la validation HTML5 est active ; le reste au Laboratoire 3. -->
-            <form class="formulaire-carte" action="merci.html" method="get">
+            <!-- Fonction S’inscrire à l’école  -->
+            <div id="confirmation" class="confirmation" role="status" tabindex="-1" hidden></div>
+            <form id="formulaire-inscription" class="formulaire-carte" action="merci.html" method="get">
 
                 <fieldset class="mb-4">
                     <legend>Tes informations</legend>
@@ -148,6 +155,17 @@
         </aside>
     </div>
 
+    <!-- Laboratoire 3 : la mémoire. Les demandes sont lues dans le localStorage par js/script.js -->
+    <section class="mt-5" id="mes-demandes" aria-labelledby="titre-demandes">
+        <div class="entete-demandes">
+            <h2 id="titre-demandes">Mes demandes d'inscription</h2>
+            <button type="button" id="bouton-effacer" class="btn btn-contour btn-sm">Tout effacer</button>
+        </div>
+        <p class="texte-doux">Ces demandes restent seulement dans ton navigateur (stockage local) : elles ne sont envoyées nulle part.</p>
+        <p id="message-vide" class="message-vide">Aucune demande pour le moment.</p>
+        <ul id="liste-demandes" class="liste-demandes"></ul>
+    </section>
+
 </main>
 
 <footer class="pied-de-page">
@@ -155,7 +173,7 @@
         <div class="pied-colonnes">
             <div>
                 <h2>OmniDrive</h2>
-                <p>Le portail de gestion pour école de conduite  cours, suivi des heures, rendez-vous et fiches des moniteurs.</p>
+                <p>Le portail de gestion pour école de conduite cours, suivi des heures, rendez-vous et fiches des moniteurs.</p>
             </div>
             <div>
                 <h2>Plan du site</h2>
@@ -177,8 +195,8 @@
         </div>
         <div class="pied-credits">
             <p>Crédits des images : les neuf visuels du site panneaux, illustrations et photos de conduite ont été trouvés en ligne, sur Pinterest. </p>
-            <p>Polices : Montserrat et Roboto Mono Google Fonts, licence SIL OFL. Framework : Bootstrap 5.3 .</p>
-            <p>© 2026 OmniDrive. Tous droits réservés. ⛐💨</p>
+            <p>Polices : Montserrat et Roboto Mono Google Fonts, licence SIL OFL. Framework : Bootstrap 5.3.</p>
+            <p>© 2024 OmniDrive. Tous droits réservés. ⛐💨</p>
         </div>
     </div>
 </footer>
