@@ -13,5 +13,15 @@ Autres sources
 - W3Schools
 - GeeksforGeeks
 
+Limites du projet
+Le site OmniDrive n'a pas de page de connexion ni de paiement en ligne.
+ Je n'ai pas eu le temps de les faire pour ce laboratoire.
+ Le formulaire d'inscription enregistre seulement la demande dans le navigateur le localStorage
+ rien n'est envoye a un serveur et aucun paiement n'est demande encore.
+ Tout ces points seraient à ameliorer si jamais je souhaites poublié le projet
+
+ Finalement j'Ai nommé le site s’appelle OmniDrive plutôt que PermisPlus comme dans le nom de mon gabarit de planification.
+  Le nom s’inspire d’Omnivox  même logique de portail ,pour suivre ses cours, 
+  ses heures et ses rendez-vous et plus.
 
 
