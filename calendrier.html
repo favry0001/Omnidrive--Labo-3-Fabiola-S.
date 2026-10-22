@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Calendrier  OmniDrive</title>
+    <title>Calendrier OmniDrive</title>
     <meta name="description" content="Le calendrier hebdomadaire des cours et des leçons d'OmniDrive, avec les créneaux libres à réserver.">
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="vendor/bootstrap.min.css">
     
     <link rel="stylesheet" href="css/style.css">
+    
+    <script src="js/theme.js"></script>
+    <script src="js/script.js" defer></script>
 </head>
 <body>
 
@@ -53,6 +56,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" id="bouton-theme" class="btn bouton-theme" aria-label="Activer le mode sombre">Mode sombre</button>
                     </li>
                 </ul>
             </div>
@@ -94,7 +100,8 @@
                         <th scope="row">9 h</th>
                         <td>
                             <span class="badge badge-type badge-theorique">Théorique</span>
-                            <span class="creneau-pris">Cours de théorie</span></td>
+                            <span class="creneau-pris">Cours de théorie</span>
+                        </td>
                         <td>
                             <button type="button" class="btn btn-primary" aria-label="Réserver le mardi 13 octobre à 9 h">Réserver</button>
                         </td>
@@ -110,7 +117,8 @@
                         </td>
                         <td>
                             <span class="badge badge-type badge-pratique">Pratique</span>
-                            <span class="creneau-pris">Leçon de conduite</span></td>
+                            <span class="creneau-pris">Leçon de conduite</span>
+                        </td>
                     </tr>
                     <tr>
                         <th scope="row">11 h</th>
@@ -118,7 +126,8 @@
                             <button type="button" class="btn btn-primary" aria-label="Réserver le lundi 12 octobre à 11 h">Réserver</button>
                         </td>
                         <td>
-                            <span class="badge badge-type badge-pratique">Pratique</span><span class="creneau-pris">Leçon de conduite</span>
+                            <span class="badge badge-type badge-pratique">Pratique</span
+                            ><span class="creneau-pris">Leçon de conduite</span>
                         </td>
                         <td>
                             <button type="button" class="btn btn-primary" aria-label="Réserver le mercredi 14 octobre à 11 h">Réserver</button>
@@ -176,8 +185,7 @@
                         </td>
                         <td>
                             <span class="badge badge-type badge-examen">Examen</span>
-                            <span class="creneau-pris">Examen simulé</span>
-                        </td>
+                            <span class="creneau-pris">Examen simulé</span></td>
                         <td>
                             <button type="button" class="btn btn-primary" aria-label="Réserver le samedi 17 octobre à 15 h">Réserver</button>
                         </td>
@@ -190,8 +198,7 @@
                         <td>
                             <button type="button" class="btn btn-primary" aria-label="Réserver le mardi 13 octobre à 17 h">Réserver</button>
                         </td>
-                        <td>
-                            <span class="badge badge-type badge-pratique">Pratique</span>
+                        <td><span class="badge badge-type badge-pratique">Pratique</span>
                             <span class="creneau-pris">Leçon de conduite</span>
                         </td>
                         <td>
@@ -271,7 +278,7 @@
         </div>
         <div class="pied-credits">
             <p>Crédits des images : les neuf visuels du site panneaux, illustrations et photos de conduite ont été trouvés en ligne, sur Pinterest. </p>
-            <p>Polices : Montserrat et Roboto Mono Google Fonts, licence SIL OFL. Framework : Bootstrap 5.3 .</p>
+            <p>Polices : Montserrat et Roboto Mono Google Fonts, licence SIL OFL. Framework : Bootstrap 5.3.</p>
             <p>© 2026 OmniDrive. Tous droits réservés. ⛐💨</p>
         </div>
     </div>
