@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="vendor/bootstrap.min.css">
     
     <link rel="stylesheet" href="css/style.css">
+    <!-- theme.js -->
+    <script src="js/theme.js"></script>
+    <script src="js/script.js" defer></script>
 </head>
 <body>
 
@@ -54,6 +57,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
                     </li>
+                    <li class="nav-item">
+                        <button type="button" id="bouton-theme" class="btn bouton-theme" aria-label="Activer le mode sombre">Mode sombre</button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -63,7 +69,7 @@
 <main id="contenu" class="container py-5">
 
     <h1>Mon suivi</h1>
-    <p class="encart-info">Les données  seront mises à jour chaque fois qu'une présence est marquée.</p>
+    <p class="encart-info">Les données seront mises à jour chaque fois qu'une présence est marquée.</p>
 
     <div class="row g-4 mt-1">
         <section class="col-12 col-lg-4" aria-labelledby="titre-global">
@@ -104,7 +110,7 @@
                     <div class="progress-bar barre-examens"></div>
                 </div>
             </div>
-            <!-- F-04 : les barres reflèteront les données de localStorage. Interface ici ; comportement au Laboratoire 3. -->
+            <!-- F-04 les barres des données de localeStorage. -->
         </section>
     </div>
 
@@ -186,7 +192,7 @@
         </div>
         <div class="pied-credits">
             <p>Crédits des images : les neuf visuels du site panneaux, illustrations et photos de conduite ont été trouvés en ligne, sur Pinterest. </p>
-            <p>Polices : Montserrat et Roboto Mono Google Fonts, licence SIL OFL. Framework : Bootstrap 5.3 .</p>
+            <p>Polices : Montserrat et Roboto Mono Google Fonts, licence SIL OFL. Framework : Bootstrap 5.3.</p>
             <p>© 2026 OmniDrive. Tous droits réservés. ⛐💨</p>
         </div>
     </div>
