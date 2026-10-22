@@ -20,7 +20,7 @@ Le site OmniDrive n'a pas de page de connexion ni de paiement en ligne.
  rien n'est envoye a un serveur et aucun paiement n'est demande encore.
  Tout ces points seraient à ameliorer si jamais je souhaites poublié le projet
 
- Finalement j'Ai nommé le site s’appelle OmniDrive plutôt que PermisPlus comme dans le nom de mon gabarit de planification.
+ Finalement, j'Ai nommé le site OmniDrive plutôt que PermisPlus, comme dans le nom de mon gabarit de planification.
   Le nom s’inspire d’Omnivox  même logique de portail ,pour suivre ses cours, 
   ses heures et ses rendez-vous et plus.
 
